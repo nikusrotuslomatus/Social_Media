@@ -1,5 +1,9 @@
 using Social_Media.Data;
 using Microsoft.EntityFrameworkCore;
+
+using Social_Media.Data;
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -10,6 +14,12 @@ builder.Services.AddDbContext<ApplicationDbContext>(options=>
 });
 
 var app = builder.Build();
+
+if (args.Length == 1 && args[0].ToLower() == "seeddata")
+{
+    //await Seed.SeedUsersAndRolesAsync(app);
+    Seed.SeedData(app);
+}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
