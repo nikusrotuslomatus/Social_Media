@@ -26,6 +26,7 @@ namespace Social_Media.Data
                     {
                         new Group()
                         {
+
                             Title = "Ozzy Osbourne",
                             Image = "https://yt3.googleusercontent.com/NLB_F8uL9P8Wyr94tNM47aGHnQFOuE6E-rUl1hx9iw0PZxb_K3ok7i5k3ArN-x6oFs9bVy5lHg=s900-c-k-c0x00ffffff-no-rj",
                             Description = "This is the description of the first Band",
@@ -34,14 +35,18 @@ namespace Social_Media.Data
                             {
                                 Street = "Aldaru iela 6",
                                 City = "Riga",
-                                State = ""
+                                State = "",
                             }
-                         },
+
+                },
                         new Group()
                         {
+
                             Title = "Metallica",
                             Image = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Metallica_wordmark.svg/1280px-Metallica_wordmark.svg.png",
                             Description = "This is the description of the second Band",
+
+                            
                             GroupCategory = GroupCategory.Pop,
                             Address = new Address()
                             {
@@ -52,9 +57,13 @@ namespace Social_Media.Data
                         },
                         new Group()
                         {
+
                             Title = "Lincin park",
                             Image = "https://www.gannett-cdn.com/-mm-/4e09c2618c2c46c8dd6669ce088d1637a1ad52a5/c=0-17-648-382/local/-/media/Phoenix/Phoenix/2014/05/27//1401210370000-linkin-park.jpg",
                             Description = "This is the description of the third Band",
+
+                            
+
                             GroupCategory = GroupCategory.Rock,
                             Address = new Address()
                             {
@@ -65,9 +74,13 @@ namespace Social_Media.Data
                         },
                         new Group()
                         {
+
                             Title = "BAU",
                             Image = "https://a-a-ah-ru.s3.amazonaws.com/uploads/items/154268/320735/large_m1000x1000.jpg",
                             Description = "This is the description of the fourth Band",
+
+                            
+
                             GroupCategory = GroupCategory.Granje,
                             Address = new Address()
                             {
@@ -76,21 +89,25 @@ namespace Social_Media.Data
                                 State = "NC"
                             }
                         }
-                    });
+                    }) ;
                     context.SaveChanges();
                 }
                 //Concerts
-                
+
                 if (!context.Concerts.Any())
                 {
                     context.Concerts.AddRange(new List<Concert>()
                     {
                         new Concert()
                         {
+
                             Title = "Indoor Concert",
                             Image = "",
                             Description = "This is the description of the first Concert",
                             ConcertCategory = ConcertCategory.Indoor,
+
+                            
+
                             Address = new Address()
                             {
                                 Street = "123 Main St",
@@ -100,10 +117,14 @@ namespace Social_Media.Data
                         },
                         new Concert()
                         {
+
                             Title = "Burning man",
                             Image = "",
                             Description = "This is the description of the first Concert",
                             ConcertCategory = ConcertCategory.Outdoor,
+
+                            
+
                             AddressId = 5,
                             Address = new Address()
                             {
