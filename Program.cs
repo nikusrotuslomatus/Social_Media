@@ -1,6 +1,11 @@
 using Social_Media.Data;
 using Microsoft.EntityFrameworkCore;
+
 using Social_Media.Data;
+
+
+using Social_Media.Data;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,6 +23,7 @@ if (args.Length == 1 && args[0].ToLower() == "seeddata")
     //await Seed.SeedUsersAndRolesAsync(app);
     Seed.SeedData(app);
 }
+
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
