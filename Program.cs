@@ -4,6 +4,9 @@ using Microsoft.EntityFrameworkCore;
 using Social_Media.Data;
 
 
+using Social_Media.Data;
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
