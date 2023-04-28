@@ -1,7 +1,17 @@
 using Social_Media.Data;
 using Microsoft.EntityFrameworkCore;
+<<<<<<< HEAD
 using Social_Media.Data;
 
+=======
+
+using Social_Media.Data;
+
+
+using Social_Media.Data;
+
+
+>>>>>>> b52615543aa7ae992c423f60e8da4fd40630542e
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -12,11 +22,19 @@ builder.Services.AddDbContext<ApplicationDbContext>(options=>
 });
 
 var app = builder.Build();
+<<<<<<< HEAD
+=======
+
+>>>>>>> b52615543aa7ae992c423f60e8da4fd40630542e
 if (args.Length == 1 && args[0].ToLower() == "seeddata")
 {
     //await Seed.SeedUsersAndRolesAsync(app);
     Seed.SeedData(app);
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> b52615543aa7ae992c423f60e8da4fd40630542e
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {

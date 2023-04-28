@@ -26,6 +26,7 @@ namespace Social_Media.Data
                     {
                         new Group()
                         {
+<<<<<<< HEAD
                             Title = "Running Group 1",
                             Image = "https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/running.jpg?quality=82&strip=1&resize=640%2C360",
                             Description = "This is the description of the first Group",
@@ -42,6 +43,29 @@ namespace Social_Media.Data
                             Title = "Running Group 2",
                             Image = "https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/running.jpg?quality=82&strip=1&resize=640%2C360",
                             Description = "This is the description of the first Group",
+=======
+
+                            Title = "Ozzy Osbourne",
+                            Image = "https://yt3.googleusercontent.com/NLB_F8uL9P8Wyr94tNM47aGHnQFOuE6E-rUl1hx9iw0PZxb_K3ok7i5k3ArN-x6oFs9bVy5lHg=s900-c-k-c0x00ffffff-no-rj",
+                            Description = "This is the description of the first Band",
+                            GroupCategory = GroupCategory.Indie,
+                            Address = new Address()
+                            {
+                                Street = "Aldaru iela 6",
+                                City = "Riga",
+                                State = "",
+                            }
+
+                },
+                        new Group()
+                        {
+
+                            Title = "Metallica",
+                            Image = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Metallica_wordmark.svg/1280px-Metallica_wordmark.svg.png",
+                            Description = "This is the description of the second Band",
+
+                            
+>>>>>>> b52615543aa7ae992c423f60e8da4fd40630542e
                             GroupCategory = GroupCategory.Pop,
                             Address = new Address()
                             {
@@ -52,9 +76,19 @@ namespace Social_Media.Data
                         },
                         new Group()
                         {
+<<<<<<< HEAD
                             Title = "Running Group 3",
                             Image = "https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/running.jpg?quality=82&strip=1&resize=640%2C360",
                             Description = "This is the description of the first Group",
+=======
+
+                            Title = "Lincin park",
+                            Image = "https://www.gannett-cdn.com/-mm-/4e09c2618c2c46c8dd6669ce088d1637a1ad52a5/c=0-17-648-382/local/-/media/Phoenix/Phoenix/2014/05/27//1401210370000-linkin-park.jpg",
+                            Description = "This is the description of the third Band",
+
+                            
+
+>>>>>>> b52615543aa7ae992c423f60e8da4fd40630542e
                             GroupCategory = GroupCategory.Rock,
                             Address = new Address()
                             {
@@ -65,9 +99,19 @@ namespace Social_Media.Data
                         },
                         new Group()
                         {
+<<<<<<< HEAD
                             Title = "Running Group 3",
                             Image = "https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/running.jpg?quality=82&strip=1&resize=640%2C360",
                             Description = "This is the description of the first Group",
+=======
+
+                            Title = "BAU",
+                            Image = "https://a-a-ah-ru.s3.amazonaws.com/uploads/items/154268/320735/large_m1000x1000.jpg",
+                            Description = "This is the description of the fourth Band",
+
+                            
+
+>>>>>>> b52615543aa7ae992c423f60e8da4fd40630542e
                             GroupCategory = GroupCategory.Granje,
                             Address = new Address()
                             {
@@ -76,20 +120,39 @@ namespace Social_Media.Data
                                 State = "NC"
                             }
                         }
+<<<<<<< HEAD
                     });
                     context.SaveChanges();
                 }
                 //Concerts
+=======
+                    }) ;
+                    context.SaveChanges();
+                }
+                //Concerts
+
+>>>>>>> b52615543aa7ae992c423f60e8da4fd40630542e
                 if (!context.Concerts.Any())
                 {
                     context.Concerts.AddRange(new List<Concert>()
                     {
                         new Concert()
                         {
+<<<<<<< HEAD
                             Title = "Running Concert 1",
                             Image = "https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/running.jpg?quality=82&strip=1&resize=640%2C360",
                             Description = "This is the description of the first Concert",
                             ConcertCategory = ConcertCategory.Charity,
+=======
+
+                            Title = "Indoor Concert",
+                            Image = "",
+                            Description = "This is the description of the first Concert",
+                            ConcertCategory = ConcertCategory.Indoor,
+
+                            
+
+>>>>>>> b52615543aa7ae992c423f60e8da4fd40630542e
                             Address = new Address()
                             {
                                 Street = "123 Main St",
@@ -99,10 +162,21 @@ namespace Social_Media.Data
                         },
                         new Concert()
                         {
+<<<<<<< HEAD
                             Title = "Running Concert 2",
                             Image = "https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/running.jpg?quality=82&strip=1&resize=640%2C360",
                             Description = "This is the description of the first Concert",
                             ConcertCategory = ConcertCategory.NonCharity,
+=======
+
+                            Title = "Burning man",
+                            Image = "",
+                            Description = "This is the description of the first Concert",
+                            ConcertCategory = ConcertCategory.Outdoor,
+
+                            
+
+>>>>>>> b52615543aa7ae992c423f60e8da4fd40630542e
                             AddressId = 5,
                             Address = new Address()
                             {
