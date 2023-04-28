@@ -35,20 +35,10 @@ namespace Social_Media.Data
                             {
                                 Street = "Aldaru iela 6",
                                 City = "Riga",
-                                State = ""
-
-                            Title = "Running Group 1",
-                            Image = "https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/running.jpg?quality=82&strip=1&resize=640%2C360",
-                            Description = "This is the description of the first Group",
-                            GroupCategory = GroupCategory.Indie,
-                            Address = new Address()
-                            {
-                                Street = "123 Main St",
-                                City = "Charlotte",
-                                State = "NC"
-
+                                State = "",
                             }
-                         },
+
+                },
                         new Group()
                         {
 
@@ -56,10 +46,7 @@ namespace Social_Media.Data
                             Image = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Metallica_wordmark.svg/1280px-Metallica_wordmark.svg.png",
                             Description = "This is the description of the second Band",
 
-                            Title = "Running Group 2",
-                            Image = "https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/running.jpg?quality=82&strip=1&resize=640%2C360",
-                            Description = "This is the description of the first Group",
-
+                            
                             GroupCategory = GroupCategory.Pop,
                             Address = new Address()
                             {
@@ -75,9 +62,7 @@ namespace Social_Media.Data
                             Image = "https://www.gannett-cdn.com/-mm-/4e09c2618c2c46c8dd6669ce088d1637a1ad52a5/c=0-17-648-382/local/-/media/Phoenix/Phoenix/2014/05/27//1401210370000-linkin-park.jpg",
                             Description = "This is the description of the third Band",
 
-                            Title = "Running Group 3",
-                            Image = "https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/running.jpg?quality=82&strip=1&resize=640%2C360",
-                            Description = "This is the description of the first Group",
+                            
 
                             GroupCategory = GroupCategory.Rock,
                             Address = new Address()
@@ -94,9 +79,7 @@ namespace Social_Media.Data
                             Image = "https://a-a-ah-ru.s3.amazonaws.com/uploads/items/154268/320735/large_m1000x1000.jpg",
                             Description = "This is the description of the fourth Band",
 
-                            Title = "Running Group 3",
-                            Image = "https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/running.jpg?quality=82&strip=1&resize=640%2C360",
-                            Description = "This is the description of the first Group",
+                            
 
                             GroupCategory = GroupCategory.Granje,
                             Address = new Address()
@@ -106,7 +89,7 @@ namespace Social_Media.Data
                                 State = "NC"
                             }
                         }
-                    });
+                    }) ;
                     context.SaveChanges();
                 }
                 //Concerts
@@ -123,10 +106,7 @@ namespace Social_Media.Data
                             Description = "This is the description of the first Concert",
                             ConcertCategory = ConcertCategory.Indoor,
 
-                            Title = "Running Concert 1",
-                            Image = "https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/running.jpg?quality=82&strip=1&resize=640%2C360",
-                            Description = "This is the description of the first Concert",
-                            ConcertCategory = ConcertCategory.Charity,
+                            
 
                             Address = new Address()
                             {
@@ -143,10 +123,7 @@ namespace Social_Media.Data
                             Description = "This is the description of the first Concert",
                             ConcertCategory = ConcertCategory.Outdoor,
 
-                            Title = "Running Concert 2",
-                            Image = "https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/running.jpg?quality=82&strip=1&resize=640%2C360",
-                            Description = "This is the description of the first Concert",
-                            ConcertCategory = ConcertCategory.NonCharity,
+                            
 
                             AddressId = 5,
                             Address = new Address()

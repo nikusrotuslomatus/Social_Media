@@ -17,12 +17,9 @@ namespace Social_Media.Controllers
         }
         public IActionResult Index()
         {
-            List<Group> groups=_context.Groups.ToList();
+            List<Group> groups = _context.Groups.ToList();
             return View(groups);
 
-        public IActionResult Index()
-        {
-            return View();
 
         }
     }
