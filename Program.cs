@@ -1,6 +1,6 @@
 using Social_Media.Data;
 using Microsoft.EntityFrameworkCore;
-using RunGroopWebApp.Data;
+using Social_Media.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
