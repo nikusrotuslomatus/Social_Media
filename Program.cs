@@ -2,15 +2,15 @@ using Social_Media.Data;
 using Microsoft.EntityFrameworkCore;
 
 using Social_Media.Data;
-
-
-
-
+using Social_Media.Interfaces;
+using Social_Media.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IGroupRepository, GroupRepository>();
+builder.Services.AddScoped<IConcertRepository, ConcertRepository>();
 builder.Services.AddDbContext<ApplicationDbContext>(options=>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));

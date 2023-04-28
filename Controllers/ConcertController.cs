@@ -1,21 +1,32 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Social_Media.Data;
+using Social_Media.Interfaces;
 using Social_Media.Models;
 
 namespace Social_Media.Controllers
 {
     public class ConcertController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly IConcertRepository _concertRepository;
 
-        public ConcertController(ApplicationDbContext context)
+        public ConcertController(IConcertRepository concertRepository)
         {
-            this._context = context;
+            this._concertRepository = concertRepository;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> IndexAsync()
         {
-            List<Concert> concerts = _context.Concerts.ToList();
-            return View(concerts);
+            IEnumerable<Concert> Concerts = await _concertRepository.GetAll();
+            return View(Concerts);
+
+
+        }
+
+        public async Task<IActionResult> DetailAsync(int id)
+        {
+            Concert Concert = await _concertRepository.GetByIdAsync(id);
+            return View(Concert);
+
+
         }
     }
 }

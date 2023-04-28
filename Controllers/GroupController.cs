@@ -1,24 +1,33 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
 using Social_Media.Data;
+using Social_Media.Interfaces;
 using Social_Media.Models;
-
+using Social_Media.Repository;
 
 namespace Social_Media.Controllers
 {
     public class GroupController : Controller
     {
 
-        private readonly ApplicationDbContext _context;
+        private readonly IGroupRepository _groupRepository;
 
-        public GroupController(ApplicationDbContext context)
+        public GroupController(IGroupRepository _groupRepository)
         {
-            this._context = context;
+            this._groupRepository = _groupRepository;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> IndexAsync()
         {
-            List<Group> groups = _context.Groups.ToList();
+            IEnumerable<Group> groups = await _groupRepository.GetAll();
             return View(groups);
+
+
+        }
+        
+        public async Task<IActionResult> DetailAsync(int id)
+        {
+            Group group = await _groupRepository.GetByIdAsync(id);
+            return View(group);
 
 
         }
