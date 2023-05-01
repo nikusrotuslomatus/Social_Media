@@ -11,18 +11,18 @@ namespace Social_Media.Repository
         private readonly ApplicationDbContext _context;
 
         public ConcertRepository(ApplicationDbContext context) {
-            _context = context;
+            this._context = context;
             
         }
         public bool Add(Concert concert)
         {
-            _context.Add(concert);
+            this._context.Add(concert);
             return Save();
         }
 
         public bool Delete(Concert concert)
         {
-            _context.Remove(concert);
+            this._context.Remove(concert);
             return Save();
         }
 

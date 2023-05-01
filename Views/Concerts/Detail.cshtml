@@ -1,4 +1,4 @@
-﻿@model Social_Media.Models.Group
+﻿@model Social_Media.Models.Concert
 
 @{
     ViewData["Title"] = "Detail";
@@ -10,47 +10,42 @@
     <h4>Group</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Title)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Title)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Description)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Description)
         </dd>
         <div>
-            <dt class = "col-sm-2">
+            <dt class="col-sm-2">
                 @Html.DisplayNameFor(model => model.Image)
             </dt>
-            <dd class = "col-sm-10">
+            <dd class="col-sm-10">
                 <img class="card-img-top" src="@Html.DisplayFor(model => model.Image)" alt="Card image cap">
-            </dd>
+            </dd>>
         </div>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Address)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Address.Id)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.GroupCategory)
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ConcertCategory)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.GroupCategory)
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ConcertCategory)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.AppUser)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.AppUser.Id)
-        </dd>
+        
     </dl>
 </div>
 <div>
-    
+
     <a asp-action="Index">Back to List</a>
 </div>
