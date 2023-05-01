@@ -5,6 +5,10 @@ using Social_Media.Data;
 using Social_Media.Interfaces;
 using Social_Media.Repository;
 
+>>>>>>> b52615543aa7ae992c423f60e8da4fd40630542e
+=========
+
+>>>>>>>>> Temporary merge branch 2
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
