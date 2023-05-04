@@ -34,14 +34,19 @@ namespace Social_Media.Services
             return uploadResult;
         }
 
-        public async Task<ImageUploadResult> DeletePhotoAsync(string publicId)
+        public async Task<DeletionResult> DeletePhotoAsync(string publicUrl)
         {
-            var deleteParams = new DeletionParams(publicId );   
-            var result = await _cloudinary.DestroyAsync(deleteParams);
-            return result;
+            var publicId = publicUrl.Split('/').Last().Split('.')[0];
+            var deleteParams = new DeletionParams(publicId);
+            return await _cloudinary.DestroyAsync(deleteParams);
         }
 
         public Task<ImageUploadResult> UpdatePhotoAsync(IFormFile file)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<ImageUploadResult> IPhotoService.DeletePhotoAsync(string publicUrl)
         {
             throw new NotImplementedException();
         }

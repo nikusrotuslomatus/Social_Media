@@ -1,10 +1,10 @@
 using Social_Media.Data;
 using Microsoft.EntityFrameworkCore;
 
-using Social_Media.Data;
 using Social_Media.Interfaces;
 using Social_Media.Repository;
-
+using Social_Media.Helpers;
+using Social_Media.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +12,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IGroupRepository, GroupRepository>();
 builder.Services.AddScoped<IConcertRepository, ConcertRepository>();
+builder.Services.AddScoped<IPhotoService,PhotoService>();
+builder.Services.Configure<CloudinarySettings>(builder.Configuration.GetSection(nameof(CloudinarySettings)));
 builder.Services.AddDbContext<ApplicationDbContext>(options=>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));

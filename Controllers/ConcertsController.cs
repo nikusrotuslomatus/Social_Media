@@ -48,7 +48,6 @@ namespace Social_Media.Controllers
             {
                 _concertRepository.Add(concert);
                 return RedirectToAction("Index");
-                
             }
             return View(concert);
 

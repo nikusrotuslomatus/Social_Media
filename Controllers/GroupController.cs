@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Social_Media.Data;
 using Social_Media.Interfaces;
 using Social_Media.Models;
+using Social_Media.ViewModels;
 
 namespace Social_Media.Controllers
 {
@@ -15,10 +16,12 @@ namespace Social_Media.Controllers
     {
 
         private readonly IGroupRepository _groupRepository;
+        private readonly IPhotoService _photoService;
 
-        public GroupController(IGroupRepository groupRepository)
+        public GroupController(IGroupRepository groupRepository,IPhotoService photoService)
         {
             _groupRepository = groupRepository;
+            _photoService = photoService;
         }
         public async Task<IActionResult> IndexAsync()
         {
@@ -43,14 +46,41 @@ namespace Social_Media.Controllers
 
         [HttpPost]
         [AutoValidateAntiforgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,Description,Image,AddressId,GroupCategory,AppUserId")] Group group)
+        public async Task<IActionResult> Create( CreateGroupVM groupVM)
         {
-            if (!ModelState.IsValid)
+            if (ModelState.IsValid)
+
             {
-                return View(group);
+                var result = await _photoService.AddPhotoAsync(groupVM.Image);
+                var group = new Group
+                {
+                    Title = groupVM.Title,
+                    Description = groupVM.Description,
+                    Image = result.Url.ToString(),
+                    GroupCategory = groupVM.GroupCategory,
+                    AppUserId = groupVM.AppUserId,
+                    Address = new Address
+                    {
+                        Street = groupVM.Address.Street,
+                        City = groupVM.Address.City,
+                        State = groupVM.Address.State,
+                    }
+
+
+                };
+
+                _groupRepository.Add(group);
+                return RedirectToAction("Index");
+
             }
-            _groupRepository.Add(group);
-            return RedirectToAction("Index");
+            else
+            {
+                ModelState.AddModelError("", "Photo upload failed");
+                
+            }
+            
+            return View(groupVM);
+
         }
 
 

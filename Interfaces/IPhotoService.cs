@@ -6,6 +6,6 @@ namespace Social_Media.Interfaces
     {
         Task<ImageUploadResult> AddPhotoAsync(IFormFile file);
         Task<ImageUploadResult> UpdatePhotoAsync(IFormFile file);
-        Task<ImageUploadResult> DeletePhotoAsync(string publicId);
+        public Task<ImageUploadResult> DeletePhotoAsync(string publicUrl);
     }
 }
