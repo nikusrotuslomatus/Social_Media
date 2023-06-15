@@ -5,6 +5,8 @@ using Social_Media.Interfaces;
 using Social_Media.Repository;
 using Social_Media.Helpers;
 using Social_Media.Services;
+>>>>>>> b52615543aa7ae992c423f60e8da4fd40630542e
+=========
 
 var builder = WebApplication.CreateBuilder(args);
 
